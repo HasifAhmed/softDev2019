@@ -13,16 +13,16 @@ function clearCanvas(){
 }
 function addDrawing(event){
   // var edge = c.getBoundingClientRect();
-  var x = event.offsetX;
-  var y = event.offsetY;
+  var x = event.offsetX;//the difference between the x coord of the mouse position to the left most side of the div the mouse was in.
+  var y = event.offsetY;//the difference between the y coord of the mouse position to the top of the div the mouse was in.
   if (shape == "rect"){
     ctx.fillRect(x, y, 50, 100);
   }
   else{
-    ctx.beginPath(); //Dis
+    ctx.beginPath(); //removes the old path, so a line is not drawn between circles
     ctx.ellipse(x, y, 25, 25, 0, 0, 7);
-    ctx.stroke();
-    ctx.fill();
+    // ctx.stroke() // draws a circle
+    ctx.fill(); // draws a dot
   }
 }
 function changeShape(){
