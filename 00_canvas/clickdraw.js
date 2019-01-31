@@ -1,3 +1,8 @@
+// Yin on Chan
+// SoftDev2 pd8
+// K00 -- I See a Red Door
+// 2019-01-30
+
 var shape = "rect";
 var c = document.getElementById("slate");
 var ctx = c.getContext("2d");
